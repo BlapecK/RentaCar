@@ -41,7 +41,7 @@ public class VehiculosDisponiblesPdf extends AbstractPdfView {
 		String fechaFormateada = sdf.format(fechaActual);
 
 		// Establece el nombre del archivo PDF
-		String fileName = "Listado_Vehiculos.pdf"; // Cambia el nombre del archivo a lo que desees
+		String fileName = "Listado_Vehiculos_Disponibles.pdf"; // Cambia el nombre del archivo a lo que desees
 		response.setHeader("Content-Disposition", "inline; filename=" + fileName);
 
 		@SuppressWarnings("unchecked")
@@ -295,13 +295,6 @@ public class VehiculosDisponiblesPdf extends AbstractPdfView {
 
 			tablaClientes.addCell(cell2);
 		}
-
-		// Añade una imagen en la esquina inferior izquierda
-		Image image = Image.getInstance("src/main/resources/static/imagenes/Logo.png");
-		image.scaleAbsolute(50, 50);
-		image.setAbsolutePosition(10, 10);
-
-		document.add(image);
 
 		document.add(tablaTitulo);
 		document.add(tablaClientes);

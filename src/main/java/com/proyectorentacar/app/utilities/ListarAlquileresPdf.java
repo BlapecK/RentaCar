@@ -296,13 +296,6 @@ public class ListarAlquileresPdf extends AbstractPdfView {
 			tablaClientes.addCell(cell2);
 		});
 
-		// Añade una imagen en la esquina inferior izquierda
-		Image image = Image.getInstance("src/main/resources/static/imagenes/Logo.png");
-		image.scaleAbsolute(50, 50);
-		image.setAbsolutePosition(10, 10);
-
-		document.add(image);
-
 		document.add(tablaTitulo);
 		document.add(tablaClientes);
 
